@@ -28,9 +28,9 @@ N/A
 
 ## Submission Links
 
-### Deployed URL: 
+### Deployed URL: https://momoncada.github.io/moncada-portfolio/
 
-### GitHub: 
+### GitHub: https://github.com/MoMoncada/moncada-portfolio
 
 ---------------------
 
