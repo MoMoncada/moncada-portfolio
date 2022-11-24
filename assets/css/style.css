@@ -1,0 +1,459 @@
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+  --main-blue: #4682b4;
+  --white-sections: white;
+  --secondary-blue: lightblue;
+  --focus-green: rgb(144, 238, 167);
+  
+}
+
+html {
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    font-family: monospace,'Courier New', Courier;
+    background-color: var(--main-blue);
+    color: var(--white-sections);
+}
+
+
+
+body {
+height: 100%;
+background-color: var(--white-sections);
+font-family: monospace,'Courier New', Courier;
+}
+
+
+
+/*top header specs*/
+header h1 {
+    color: var(--white-sections);
+    margin: 10px 10px 10px 25px;
+    font-size: 45px;
+   
+} 
+
+
+
+/* trop navigation bar specs */
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 28px;
+    font-family: monospace,'Courier New', Courier;
+    margin-top: 20px;
+    margin-right: 25px;
+} 
+
+
+/* switches the nav bar from block -> in-line */
+header nav ul li {
+    display:inline-block;
+    margin-left: 65px;
+    
+} 
+
+a {
+    color: var(--white-sections);
+    text-decoration: none;
+   
+}
+
+.hero {
+background-image:url(https://images.unsplash.com/photo-1488188840666-e2308741a62f?ixlib=rb-4.0.3&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb);
+height: 80vh;
+background-size: cover;
+background-repeat: no-repeat;
+display: flex;
+justify-content: center;
+align-items: center;
+color: var(--white-sections);
+font-size: 100px;
+}
+
+
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+/*dividing line between main sections*/
+
+hr {
+    border: 1px solid var(--main-blue);
+    width: 60%;
+    opacity: 50%;
+    margin-top: 100px;
+    margin-left: 275px;
+
+}
+
+/* profile photo */
+.profile-photo {
+    width:300px;
+    height: auto;
+    margin-left: 130px;
+    border-radius: 8px;
+    border-right: 5px solid var(--main-blue); 
+    
+   
+}
+/* about me section */
+#about-me {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: justify;
+    padding: 40px;
+    width: 75%;
+    margin-left: 200px;
+    margin-top: 130px;
+    
+}
+
+
+/*text in headers within #about-me*/
+#about-me h2{
+    text-align: center;
+    font-family: monospace,'Courier New', Courier;
+    font-size: 25px;
+}
+
+
+
+
+/*  specs for 'project' section */
+#projects{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    /*creates space between the about me and the contact sections*/
+    margin-top: 155px;
+    margin-bottom: 175px;
+}
+
+/*this sets all the project images to the same px size*/
+
+
+#projects .first-app img{ /*making the very first app slightly larger than the other ones */
+    width: 265px;
+    height: auto;
+    
+}
+
+.projects h2 {
+  font-size: 25px;
+}
+
+
+#projects img{ /*the other apps are smaller in size */
+   
+    width: 220px;
+    height: auto;
+  
+} 
+
+/* headers within #project specs*/
+#projects h3 { 
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration:underline;
+    font-size: 20px;
+    font-family: monospace;
+    
+}
+
+/* this section is setting the layout for the images in the project section */
+  .project-images {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 75%;
+}
+
+
+  .portfolio-projects {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+  }
+
+/* social media logos and specs*/
+
+
+#social-media img {
+    width: 50px;
+    height: 50px;
+}
+
+#contact-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+#contact-me h2 {
+    text-align: center;
+}
+
+
+.contact-details {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+
+/*hovers and media queries*/
+
+.hero:hover {
+    filter: blur(3px);
+    transition-property: filter;
+    transition-duration: 1.5s;
+    transition-timing-function: ease-in-out;
+}
+
+a:hover{
+    color: var(--secondary-blue);
+}
+
+
+
+img:hover{
+background-color: var(--secondary-blue);
+transform: scale(1.1);
+}
+
+
+#social-media:hover img {
+    
+transform: scale(1.1);  
+  }
+
+
+  /*desktop first approach*/
+  /* first break in the screen*/
+ @media screen and (max-width: 980px) {
+    header {
+      padding-bottom: 0;
+      justify-content: center;
+      position: relative;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    header h1 {
+      width: 100%;
+      text-align: center;
+      margin: 5px
+    }
+
+    header nav ul {
+      margin-top: 20px;
+      width: 100%;
+      justify-content: center;
+    }
+
+
+    header nav ul li a {
+      font-size: 20px;
+    }
+
+
+    p {
+        flex: 1 1 0;
+        text-align: left;
+        justify-content: left;
+    }
+
+    #projects {
+        flex-direction: column;
+        
+    }
+
+    .project-images {
+        gap: 50px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+      padding-bottom: 0;
+      justify-content: center;
+      position: relative;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    header h1 {
+      width: 100%;
+      text-align: center;
+      margin: 5px
+    }
+    header nav ul {
+      margin-top: 20px;
+      width: 100%;
+      justify-content: center;
+    }
+    header nav ul li a {
+      font-size: 20px;
+    }
+
+    #about-me {
+      
+       display: block;
+       margin-left: 100px;
+    }
+
+    #about-me .profile-photo {
+        margin-top: 50px;
+        margin-left: 60px;
+    }
+
+    hr {
+     margin-left: 150px;   
+    }
+   
+
+   #projects {
+    flex-direction: column;
+   }
+
+   #projects .project-images {
+    flex-direction: column;
+    
+   }
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+      padding-bottom: 0;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+     
+    header h1 {
+      width: 100%;
+      text-align: center;
+      margin: 5px
+    }
+    header nav ul {
+      margin-top: 20px;
+      width: 100%;
+      justify-content: center;
+    }
+    header nav ul li a {
+      font-size: 20px;
+    }
+
+    #about-me {
+      flex-direction: column;
+      
+       margin-left: 100px;
+    }
+
+    #about-me .about-me-text {
+        justify-content: center;
+    }
+
+    #about-me .about-me-photo {
+       justify-content: center;
+    }
+
+    hr {
+     margin-left: 150px;   
+    }
+   
+
+   #projects {
+    flex-direction: column;
+   }
+
+   #projects .project-images {
+    flex-direction: column;
+    
+   }
+}
+
+
+@media screen and (max-width: 490px) {
+    header {
+      padding-bottom: 0;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+     
+    header h1 {
+      width: 100%;
+      text-align: center;
+      margin: 5px
+    }
+    header nav ul {
+      margin-top: 20px;
+      width: 100%;
+      justify-content: center;
+    }
+    header nav ul li a {
+      font-size: 20px;
+    }
+
+    #about-me {
+      flex-direction: column;
+      
+       margin-left: 100px;
+    }
+
+    #about-me .about-me-text {
+        justify-content: center;
+    }
+
+    #about-me .about-me-photo {
+       justify-content: center;
+    }
+
+    hr {
+     margin-left: 150px; 
+     
+    }
+   
+
+   #projects {
+    flex-direction: column;
+   }
+
+   #projects .project-images {
+    flex-direction: column;
+    
+   }
+}
+  
+
